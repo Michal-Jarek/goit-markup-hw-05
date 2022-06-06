@@ -1,0 +1,396 @@
+/* 
+    Reguły czcionek:
+     font-family: 'Raleway', sans-serif;
+     font-family: 'Roboto', sans-serif;
+*/
+/* Variables CSS*/
+:root {
+  --main-txt-color: rgba(33, 33, 33, 1);
+  --buttons-first-color: rgba(245, 244, 250, 1);
+  --main-color: rgba(33, 150, 243, 1);
+  --logo-white-color: rgba(255, 255, 255, 1);
+  --logo-dark-color: rgba(0, 0, 0, 1);
+  --dark-motive: rgba(47, 48, 58, 1);
+  --team-bg-color: rgba(245, 244, 250, 1);
+  --footer-links-color: rgba(255, 255, 255, 0.6);
+  --nav-second-color: rgba(117, 117, 117, 1);
+  --line-height-small: 1.172;
+  --line-height-big: 1.714;
+}
+/* General body styling*/
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-txt-color);
+}
+/*
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block; 
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+
+/* =========================== kontenery ============================= */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.section {
+  padding: 94px 0;
+}
+.navigation .links {
+  display: flex;
+  align-items: center;
+}
+header .container {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.links .logo {
+  margin-right: 93px;
+}
+.links .links-item:not(:last-child) {
+  margin-right: 46px;
+}
+.order .container {
+  flex-direction: column;
+  text-align: center;
+}
+.order h1 {
+  margin-bottom: 30px;
+  width: 696px;
+}
+.order {
+  padding: 200px 0;
+}
+/* ========= Description container ======= */
+
+.description .container dl{
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
+.container-secondary{
+  width: 270px;
+}
+.description .container-secondary dt{
+  margin-bottom: 10px;
+} 
+
+/* ====== END ======= */
+
+/* ============= About us container ======= */
+
+.about-us .container{
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us .container .list{
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  width: 1170px;
+}
+/* ====== END ======= */
+
+/* ==============  Team container ================= */
+.team .container{
+  flex-direction: column;
+  align-items: center;
+}
+.team .container .list{
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  margin-top: 50px;  
+}
+
+.team .container .list li{
+background-color: var(--logo-white-color);
+width: 270px;
+}
+.team .container figcaption{
+  padding: 30px 0;
+  text-align: center;
+}
+.team .container p{
+  margin-top: 10px;
+}
+/* ========== Team container END ======= */
+
+
+/* ============ References ============ */
+.references .container{
+  flex-direction: column;
+}
+.references-list ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px; 
+}
+.references-list li {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);  
+}
+.references .filter ul{
+  margin-bottom: 34px;
+  width: 572px;
+  }
+.references .filter li:not(:last-of-type){
+   margin-right: 8px;
+}
+.references .filter .buttons{
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+}
+.references-list figcaption{
+border: 1px solid #EEEEEE;
+padding: 20px 24px;
+margin-top: -0.3em;
+
+}
+
+
+/* ===================== Header ============ */
+
+.header-adress {
+  margin-left: auto;
+}
+.header-adress a:first-child {
+  margin-right: 50px;
+}
+/* ==================== FOoter =============== */
+
+.foot .container {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.foot .container .links {
+  margin-top: 11px;
+}
+/* ================ Portfolio Styling =======*/
+.filter .list,
+.references-list .list {
+  display: flex;
+  justify-content: center;
+}
+
+/* Buttons styling */
+
+.buttons {
+  background-color: var(--buttons-first-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+}
+
+.buttons:hover {
+  background-color: var(--main-color);
+  color: var(--buttons-first-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.buttons:focus {
+  border: 1px solid rgba(0, 0, 0, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+.order .buttons {
+  background-color: var(--main-color);
+  color: var(--logo-white-color);
+  font-weight: 700;
+  line-height: 1.875;
+  width: 200px;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 41px;
+  letter-spacing: 0.06em;
+}
+.order button:hover {
+  background-color: var(--buttons-first-color);
+  color: var(--main-txt-color);
+}
+
+/*                                             links styling                               */
+/* logo */
+.navigation .links .logo,
+.foot .logo,
+.navigation .links .logo:visited {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.174;
+  text-decoration: none;
+}
+.logo .first {
+  color: var(--main-color);
+}
+.navigation .logo .second {
+  color: var(--logo-dark-color);
+}
+.foot .logo .second {
+  color: var(--logo-white-color);
+}
+/*                                  links                          */
+/* main and head */
+
+.links a {
+  text-decoration: none;
+  color: var(--main-txt-color);
+  font-size: 14px;
+}
+.navigation .links {
+  line-height: var(--line-height-small);
+  font-weight: 500;
+}
+.links .contact {
+  color: var(--nav-second-color);
+}
+
+/* footer */
+.foot .links {
+  line-height: var(--line-height-big);
+}
+.foot .destination {
+  text-decoration: none;
+  color: var(--logo-white-color);
+}
+
+.foot .contact {
+  color: var(--footer-links-color);
+}
+/* Hover and Focus*/
+.links a:hover,
+.links a:focus {
+  color: var(--main-color);
+  outline: none;
+}
+
+/*                                       Background colors                                  */
+
+.navigation {
+  background-color: var(--logo-white-color);
+}
+.order,
+.foot {
+  background-color: var(--dark-motive);
+}
+.team {
+  background-color: var(--team-bg-color);
+}
+/*                                        Fonts                                           */
+/* H1 */
+.order h1 {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.364;
+  color: var(--logo-white-color);
+  letter-spacing: 0.06em;
+}
+/* section description */
+.description {
+  font-size: 14px;
+}
+.description dt {
+  font-weight: 700;
+  line-height: var(--line-height-small);
+  
+}
+.description dd {
+  line-height: var(--line-height-big);
+  color: var(--nav-second-color);
+  letter-spacing: 0.03em;
+}
+
+/* aboout us */
+.about-us h2,
+.team h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: var(--line-height-small);
+}
+/* team */
+.team figcaption {
+  line-height: var(--line-height-small);
+  color: var(--nav-second-color);
+}
+.team strong {
+  font-weight: 500;
+  color: var(--main-txt-color);
+}
+/* References-list*/
+.references-list p {
+  line-height: 1.875;
+  color: var(--nav-second-color);
+}
+.references-list strong {
+  line-height: 2;
+  font-size: 18px;
+}
+
+/*     ===================       Stylowanie bloków ===================== */
+/*
+.container{
+  width: 1200px;
+}
+.order{
+  width: 1600px;
+}
+.navigation{
+  width: 1600px;
+}
+.foot{
+  width: 1600px;
+}
+.team{
+  width: 1600px;
+}
+*/
